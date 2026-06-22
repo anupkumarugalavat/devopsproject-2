@@ -180,8 +180,10 @@ resource "aws_instance" "my-ec2" {
       "sudo chmod 777 /var/run/docker.sock",
       "docker --version",
 
+      #update sonar qube image
       # Install SonarQube (as container)
-      "docker run -d --name sonar -p 9000:9000 sonarqube:lts-community",
+      #"docker run -d --name sonar -p 9000:9000 sonarqube:lts-community",
+      "docker run -d --name sonar -p 9000:9000 sonarqube:latest",
 
       # Install Trivy
       # Ref: https://aquasecurity.github.io/trivy/v0.18.3/installation/
@@ -219,6 +221,7 @@ resource "aws_instance" "my-ec2" {
       "sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd",
       "rm argocd-linux-amd64",
 
+     #check this lines
       # Install Java 21
       # Ref: https://www.rosehosting.com/blog/how-to-install-java-17-lts-on-ubuntu-20-04/
       "sudo apt update -y",

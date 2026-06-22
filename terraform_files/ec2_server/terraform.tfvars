@@ -1,7 +1,7 @@
 # DEFINE ALL YOUR VARIABLES HERE
 
 instance_type = "t3.large"
-ami           = "ami-0ec10929233384c7f" # Ubuntu 24.04
+ami           = "ami-0f8a61b66d1accaee" # Ubuntu 24.04
 key_name      = "DevopsProject1-key"    # Replace with your key-name without .pem extension
 volume_size   = 50
 region_name   = "us-east-1"
